@@ -4,16 +4,14 @@ set -e
 
 APPSET_FILES=applicationsets/development/appset.yaml
 CLUSTER_CONFIG_FILES=configurations/development/cluster-config.yaml
-#CODE_BRANCH=code
 CONFIGURATION_BRANCH=configuration
 DEBUG=true
 
 function initGlobal() {
- #  codeBranch=${CODE_BRANCH:?}
     configurationBranch=${CONFIGURATION_BRANCH:?}
     cluster_config_file="${CLUSTER_CONFIG_FILES:?}"
     appset_files="${APPSET_FILES:?}"
-#   export cluster_config_file appset_files codeBranch configurationBranch
+
     export cluster_config_file appset_files configurationBranch
 }
 
@@ -55,7 +53,7 @@ function updateTargetRevisionInAppset() {
 
 function start() {
 
-  REPOSITORY_SLUG="cbagade/argocd-configurations"
+  REPOSITORY_SLUG="cbagade/argocd-all"
   echoIt "REPOSITORY_SLUG = ${REPOSITORY_SLUG}"
 
   initGlobal
