@@ -17,4 +17,4 @@ spec:
     spec:
       containers:
       - name: nodeapp
-        image: cbagade/cont-i-img:v4
+        image: cbagade/cont-i-img:v3
