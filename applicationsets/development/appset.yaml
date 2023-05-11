@@ -3,12 +3,11 @@ kind: ApplicationSet
 metadata:
   name: development
 spec:
-#  generators:
-#  - git:
-#      files:
-#      - path: configurations/development/cluster-config.yaml
-#      repoURL: https://github.com/cbagade/argocd-all
-#      revision: configuration
+  generators:
+  - list:
+      elements:
+      - cluster: development
+        url: https://kubernetes.default.svc
   template:
     metadata:
       name: 'dev-applications'
