@@ -3,16 +3,14 @@
 set -e
 
 APPSET_FILES=applicationsets/development/appset.yaml
-CLUSTER_CONFIG_FILES=configurations/development/cluster-config.yaml
-CONFIGURATION_BRANCH=configuration
+CONFIGURATION_BRANCH=configurations
 DEBUG=true
 
 function initGlobal() {
     configurationBranch=${CONFIGURATION_BRANCH:?}
-    cluster_config_file="${CLUSTER_CONFIG_FILES:?}"
     appset_files="${APPSET_FILES:?}"
 
-    export cluster_config_file appset_files configurationBranch
+    export appset_files configurationBranch
 }
 
 function echoIt() {
