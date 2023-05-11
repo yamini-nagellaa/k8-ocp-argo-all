@@ -1,0 +1,35 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: development
+spec:
+#  generators:
+#  - git:
+#      files:
+#      - path: configurations/development/cluster-config.yaml
+#      repoURL: https://github.com/cbagade/argocd-configurations
+#      revision: configuration
+  template:
+    metadata:
+      name: 'dev-applications'
+    spec:
+      project: 'argo-learnings'
+      destination:
+        namespace: 'argocd'
+        server: https://kubernetes.default.svc
+      source:
+        path: applications
+        repoURL: https://github.com/cbagade/argocd-all
+        targetRevision: main
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+        - CreateNamespace=true
+        retry:
+          limit: 3
+          backoff:
+            duration: 2m
+            factor: 3
+            maxDuration: 8m
