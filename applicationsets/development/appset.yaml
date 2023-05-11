@@ -7,7 +7,7 @@ spec:
 #  - git:
 #      files:
 #      - path: configurations/development/cluster-config.yaml
-#      repoURL: https://github.com/cbagade/argocd-configurations
+#      repoURL: https://github.com/cbagade/argocd-all
 #      revision: configuration
   template:
     metadata:
