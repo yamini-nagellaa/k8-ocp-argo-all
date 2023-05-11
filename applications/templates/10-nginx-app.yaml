@@ -13,8 +13,8 @@ spec:
   project: argo-learnings
   source:
     path: resources/nginxapp
-    repoURL: https://github.com/cbagade/argocd-code
-    targetRevision: main
+    repoURL: https://github.com/cbagade/argocd-all
+    targetRevision: code
   syncPolicy:
     automated:
       prune: true

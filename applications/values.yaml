@@ -1,4 +1,4 @@
-repoURL: https://github.com/cbagade/argocd-code
+repoURL: https://github.com/cbagade/argocd-all
 targetRevision: code
 environment: dev #this might come from top
 argocd_vault_plugin:
