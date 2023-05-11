@@ -1,0 +1,21 @@
+spec:
+  template:
+    spec:
+      volumes:
+      - name: custom-tools
+        emptyDir: {}
+      initContainers:
+      - name: download-tools
+        image: alpine:3.12
+        command: [sh, -c]
+        args:
+        - wget -qO-  https://get.helm.sh/helm-v3.11.2-linux-amd64.tar.gz | tar -xvzf - && mv linux-amd64/helm /custom-tools/
+        volumeMounts:
+        - mountPath: /custom-tools
+          name: custom-tools
+      containers:
+      - name: argocd-repo-server
+        volumeMounts:
+        - mountPath: /usr/local/bin/helm
+          name: custom-tools
+          subPath: helm

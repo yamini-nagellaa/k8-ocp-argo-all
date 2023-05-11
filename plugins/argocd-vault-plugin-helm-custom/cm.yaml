@@ -1,0 +1,9 @@
+data:
+  configManagementPlugins: |-
+    - name: argocd-vault-plugin-helm-custom
+      init:
+        command: [sh, -c]
+        args: ["helm dependency update"]
+      generate:
+        command: ["sh", "-c"]
+        args: ["helm template $ARGOCD_ENV_HELM_VALUES $ARGOCD_ENV_HELM_ARGS ."]
