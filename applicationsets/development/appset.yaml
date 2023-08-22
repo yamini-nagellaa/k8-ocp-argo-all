@@ -19,7 +19,7 @@ spec:
       source:
         path: applications
         repoURL: https://github.com/cbagade/argocd-all
-        targetRevision: e4cd206182cd927e0f4ef7e9a9b94121ac9dc794
+        targetRevision: code
       syncPolicy:
         automated:
           prune: true
