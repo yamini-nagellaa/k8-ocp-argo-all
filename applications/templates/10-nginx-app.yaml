@@ -13,7 +13,7 @@ spec:
   project: argo-learnings
   source:
     path: resources/nginxapp
-    repoURL: https://github.com/cbagade/argocd-all
+    repoURL: https://github.com/yamini-nagellaa/argocd-all
     targetRevision: code
   syncPolicy:
     automated:
