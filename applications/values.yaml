@@ -1,4 +1,4 @@
-repoURL: https://github.com/cbagade/argocd-all
+repoURL: https://github.com/yamini-nagellaa/k8-ocp-argo-all.git
 targetRevision: code
 environment: dev #this might come from top
 argocd_vault_plugin:
