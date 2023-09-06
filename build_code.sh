@@ -51,7 +51,7 @@ function updateTargetRevisionInAppset() {
 
 function start() {
 
-  REPOSITORY_SLUG="cbagade/argocd-all"
+  REPOSITORY_SLUG="yamini-nagellaa/k8-ocp-argo-all"
   echoIt "REPOSITORY_SLUG = ${REPOSITORY_SLUG}"
 
   initGlobal
