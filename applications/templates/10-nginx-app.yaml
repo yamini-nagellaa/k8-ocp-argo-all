@@ -13,13 +13,13 @@ spec:
   project: argo-learnings
   source:
     plugin:
-        name: argocd-vault-plugin-helm-custom        
-        env:
-        - name: HELM_VALUES
-          value: --values values.yaml
-        - name: HELM_ARGS
-          value: >-
-            --set nginx_app_service.replicas={{.Values.nginx_app_service.replicas}}
+      name: argocd-vault-plugin-helm-custom        
+      env:
+      - name: HELM_VALUES
+        value: --values values.yaml
+      - name: HELM_ARGS
+        value: >-
+          --set nginx_app_service.replicas={{ .Values.nginx_app_service.replicas }}
     path: resources/nginxapp
     repoURL: https://github.com/yamini-nagellaa/k8-ocp-argo-all.git
     targetRevision: code
