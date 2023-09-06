@@ -9,10 +9,6 @@ metadata:
   project: argo-learnings
   argocd_namespace: argocd
   nginx_app_namespace: nginx-ns
-  helloworld_app_namespace: helloworld-ns
   node_app_namespace: nodeapp-ns
-  certexpirycheck_namespace: certexpiry-ns
-helloworld_app:
-  label_from_app: label-at-apps
-  label_from_cluster: cluster-label-at-apps #this might come from top
-  replicas: 1
+nginx_app_service:
+  replicas: 2
