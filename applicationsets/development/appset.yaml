@@ -19,7 +19,7 @@ spec:
       source:
         path: applications
         repoURL: https://github.com/yamini-nagellaa/k8-ocp-argo-all.git
-        targetRevision: 6afdf0c6c5ab48ff45866e427e923239a3e62a82
+        targetRevision: 32378d87ef7b0f22aa3940a2d48bc31daafab081
       syncPolicy:
         automated:
           prune: true
