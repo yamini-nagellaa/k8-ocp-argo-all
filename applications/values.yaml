@@ -11,4 +11,4 @@ metadata:
   nginx_app_namespace: nginx-ns
   node_app_namespace: nodeapp-ns
 nginx_app_service:
-  replicas: 2
+  replicas: 1
