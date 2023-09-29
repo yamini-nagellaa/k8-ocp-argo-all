@@ -43,7 +43,8 @@ function updateTargetRevisionInAppset() {
         echo "updating ${appset_file}"
         sed -i -E "s/targetRevision:.*/targetRevision:\ ${GIT_COMMIT}/" "${appset_file}"
         cat ${appset_file}
-        git config --global user.email "xyz@gmail.com"
+         git config --global user.email "${EMAIL_ID}"
+         git config --global user.name "${USER_NAME}"
         git add "${appset_file}"
     done
       ( git commit -m "Auto: Changing targetRevision for ApplicationSet" && git push ) || echo "No change in appset."
@@ -51,7 +52,7 @@ function updateTargetRevisionInAppset() {
 
 function start() {
 
-  REPOSITORY_SLUG="cbagade/argocd-all"
+  REPOSITORY_SLUG="yamini-nagellaa/k8-COE"
   echoIt "REPOSITORY_SLUG = ${REPOSITORY_SLUG}"
 
   initGlobal
